@@ -1,21 +1,8 @@
 /* Basic Layout */
+#bio, #work, #project, #more {
 
-#bio {
-  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
-  margin-top: -40px;  /* Negative margin to bring it back up */
 }
-#work {
-  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
-  margin-top: -40px;  /* Negative margin to bring it back up */
-}
-#project {
-  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
-  margin-top: -40px;  /* Negative margin to bring it back up */
-}
-#more {
-  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
-  margin-top: -40px;  /* Negative margin to bring it back up */
-}
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -34,8 +21,8 @@ body {
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem; /* Font size based on rem for better scalability */
+  margin-bottom: 1rem;
 }
 
 .name {
@@ -46,126 +33,138 @@ h2 {
 .role {
   font-size: 1.2rem;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .contact-info {
-  margin-top: 30px;
+  margin-top: 2rem;
   color: #FF5722;
+  font-size: 1.5vw;
 }
 
 .contact-info p {
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .links {
-  position: static;
-  bottom: 10px;
+  position: absolute;
+  bottom: 2rem; /* Adjust this value to control how far above the bottom the links should be */
   left: 0;
   width: 100%;
   text-align: center;
-  margin-top: 100px;
 }
+
 
 .links a {
   color: #007BFF;
   text-decoration: none;
   font-size: 1rem;
-  margin: 5px;
+  margin: 0.5rem;
 }
 
 .links a:hover {
   text-decoration: underline;
 }
 
-/* Content Section */
-.content {
-  margin-left: 320px; /* Adjust to account for sidebar width */
-  padding: 40px;
-  width: calc(100% - 320px);
-  min-height: 100vh; /* Ensure content takes up at least the full height */
-  overflow-y: auto;
-  background-color: #c9cceb62; /* Light grey background for readability */
-  color: #333333; /* Light background for better readability */
+.detail{
+  margin: 5vw;
+
 }
 
-.content section {
-  margin-bottom: 60px;
-}
-
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 800px;
-}
 
 /* Sidebar Styling */
 .sidebar {
   background-color: #121212;
-  width: 300px;
-  padding: 20px;
+  width: 25vw; /* Sidebar takes 25% of the viewport width */
+  height: 100vh; /* Sidebar takes the full height of the viewport */
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
   overflow-y: auto;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
+
 .App-header {
   text-align: center;
-  padding: 50px;
+  padding: 3rem;
 }
 
 .profile-container {
-  margin-top: 50px;
-  width: 200px;
-  height: 200px;
+  
+  position: static;
+  width: min(22vw,22vh);
+  height: auto;
+  aspect-ratio: 1 / 1; /* Forces a 1:1 aspect ratio (i.e., perfect circle) */
+  border-radius: 50%; /* Creates a circular shape */
   overflow: hidden;
-  border-radius: 50%;
-  margin: 0 auto;
+  margin: 0 0; /* Center horizontally */
 }
 
 .profile-image {
+  position: static;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 0 -10px;
+  object-position: 0 -1vh;
 }
-@media (max-height: 700px) {
-  .profile-container {
-    display: none; /* Hide the profile image when screen width is less than 600px */
-  }
+
+
+/* Content Section */
+.content {
+  position: relative; /* Ensure content is positioned naturally relative to the viewport */
+  left: 25vw; /* Align content next to the sidebar */
+  width: 75vw; /* Take up the remaining 75% of the viewport width */
+  min-height: 100vh; /* Ensure content takes up at least the full height */
+  background-color: #c9cceb62;
+  color: #333333;
+  overflow-y: auto;
+  box-sizing: border-box; 
+  padding: 2rem; /* Optional: Add padding for inner content */
+}
+
+
+.content section {
+  margin-bottom: 3rem;
+}
+
+.content h2 {
+  font-size: 2rem; /* Responsive font size */
+  margin-bottom: 1.5rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 90%; /* Adjusted max width for responsiveness */
 }
 
 /* Navbar Styling */
 .navbar {
-  background-color: #333;
-  color: white;
+  
   position: fixed;
   top: 0;
-  left: 340px; /* Adjusted to account for the sidebar width */
-  width: calc(100% - 340px); /* Make the navbar take the remaining width */
+  left: 25vw;
+  width: 75vw;
+  
+
   z-index: 1000;
-  display: flex;
-  justify-content:  space-evenly;;
-  padding: 15px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
 }
 
 .navbar nav ul {
+  justify-content: center;
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 2rem; /* Use rem for consistent spacing */
   margin: 0;
   padding: 0;
 }
@@ -180,44 +179,62 @@ h2 {
   text-decoration: underline;
 }
 
-
-
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+
+
+  
   .App {
     flex-direction: column; /* Stack sidebar and content vertically */
     height: auto; /* Allow the App to grow with content */
   }
 
   .sidebar {
+    margin-top: 2rem;
     position: relative; /* Sidebar stacks with content */
     width: 100%; /* Sidebar takes full width */
     height: auto; /* Adjust height dynamically */
   }
 
+  .contact-info {
+    margin-top: 2rem;
+    color: #FF5722;
+    font-size: 3.5vw;
+  }
+
+
   .content {
-    margin-left: 0; /* Reset the left margin for the content */
+    left: 0; /* Reset the left margin for the content */
     width: 100%; /* Content should take full width */
     height: auto; /* Allow content to grow */
-    padding: 20px;
+    padding: 10%; /* Increase padding for better spacing */
     overflow-y: auto; /* Enable scrolling in the content area */
   }
 
   .navbar {
-    position: relative;
-    left: -20px; /* Keep the original left offset */
-    top: -20px; /* Keep the original top offset */
+    
+   
+
+    width: 100vw;
+    left: 0;
+    overflow-y: auto;
+
     width: 100%; /* Make the navbar take full width */
   }
 
   .profile-container {
-    width: 150px;
-    height: 150px;
+    width: 50vw;
+    height: 50vw;
   }
 
+
   .links {
-    position: static; /* Make links flow naturally */
-    margin-top: 20px;
+    position: relative;
+    bottom: 1rem; /* Adjust this value to control how far above the bottom the links should be */
+    left: 0;
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
   }
 
   body {
