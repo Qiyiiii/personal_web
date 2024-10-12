@@ -1,0 +1,226 @@
+/* Basic Layout */
+
+#bio {
+  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
+  margin-top: -40px;  /* Negative margin to bring it back up */
+}
+#work {
+  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
+  margin-top: -40px;  /* Negative margin to bring it back up */
+}
+#project {
+  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
+  margin-top: -40px;  /* Negative margin to bring it back up */
+}
+#more {
+  padding-top: 40px;  /* Adjust this value to match the height of your navbar */
+  margin-top: -40px;  /* Negative margin to bring it back up */
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Allow body to grow if content exceeds screen height */
+  overflow: auto; /* Enable scrolling when necessary */
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.role {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 30px;
+  color: #FF5722;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.links {
+  position: static;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.links a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Content Section */
+.content {
+  margin-left: 320px; /* Adjust to account for sidebar width */
+  padding: 40px;
+  width: calc(100% - 320px);
+  min-height: 100vh; /* Ensure content takes up at least the full height */
+  overflow-y: auto;
+  background-color: #c9cceb62; /* Light grey background for readability */
+  color: #333333; /* Light background for better readability */
+}
+
+.content section {
+  margin-bottom: 60px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #121212;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.App-header {
+  text-align: center;
+  padding: 50px;
+}
+
+.profile-container {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -10px;
+}
+@media (max-height: 700px) {
+  .profile-container {
+    display: none; /* Hide the profile image when screen width is less than 600px */
+  }
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 340px; /* Adjusted to account for the sidebar width */
+  width: calc(100% - 340px); /* Make the navbar take the remaining width */
+  z-index: 1000;
+  display: flex;
+  justify-content:  space-evenly;;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column; /* Stack sidebar and content vertically */
+    height: auto; /* Allow the App to grow with content */
+  }
+
+  .sidebar {
+    position: relative; /* Sidebar stacks with content */
+    width: 100%; /* Sidebar takes full width */
+    height: auto; /* Adjust height dynamically */
+  }
+
+  .content {
+    margin-left: 0; /* Reset the left margin for the content */
+    width: 100%; /* Content should take full width */
+    height: auto; /* Allow content to grow */
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling in the content area */
+  }
+
+  .navbar {
+    position: relative;
+    left: -20px; /* Keep the original left offset */
+    top: -20px; /* Keep the original top offset */
+    width: 100%; /* Make the navbar take full width */
+  }
+
+  .profile-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .links {
+    position: static; /* Make links flow naturally */
+    margin-top: 20px;
+  }
+
+  body {
+    overflow-y: auto; /* Enable scrolling for the entire page */
+  }
+}
