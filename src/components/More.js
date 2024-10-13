@@ -12,26 +12,29 @@ const More= () => {
     {/* Hometown */}
     <article className="about-item">
       <h3>My Hometown</h3>
+      <div>
+          <img src="imgs/hefei.jpg" alt="ht" className="hometown-img" />
+        </div>
       <p>
-        My hometown is Hefei, Anhui, China.
+        Hefei, my hometown, is the vibrant capital of Anhui province, China. It's a city that blends tradition with modernity, known for its peaceful parks, beautiful lakes like Chaohu, and rich historical sites. The streets are alive with local cuisine, bustling markets, and the warmth of community life. It's a place of rapid development but retains its unique charm with a deep connection to Chinese culture and history.
       </p>
       
     </article>
 
     {/* Cat */}
     <article className="about-item">
-      <h3>My Cat</h3>
-      <p>
-        I have a cat named Yuki.
-      </p>
+   
       <PhotoSet title="Yuki's Album" />
     </article>
 
     {/* Favorite Video Game */}
     <article className="about-item">
-      <h3>Favorite Video Game</h3>
+      <h3>Video Games</h3>
       <p>
-        My favorite video game is Zelda: Tear of the Kingdom.
+        I like playing video games.
+        <br/>
+        My favorite video game is The Legend of Zelda: Tears of the Kingdom.
+        
       </p>
     </article>
 
@@ -40,6 +43,8 @@ const More= () => {
       <h3>Workout Hobby</h3>
       <p>
         I have been working out as a hobby for 6 years.
+        <br/>
+        including weight lifting and swimming.
       </p>
     </article>
   </section>

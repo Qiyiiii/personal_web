@@ -5,7 +5,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const PhotoSet = ({ title }) => {
   return (
     
+
     <section id="photo-album-carousel">
+        
+
   <h2>My Cat</h2>
   <p>I have a cat named Yuki.</p>
 
@@ -51,7 +54,7 @@ const PhotoSet = ({ title }) => {
     </div>
 
     <div className="right-content">
-      <p>This is the new component aligned to the right of the photo album.</p>
+      <p>Yuki is a blue bicolour Ragdoll born on July 1, 2020, sharing the same birthday as me! She has been playful and clingy since she was a kitten. One of her sweetest habits is waiting by the door for me to come back.</p>
     </div>
   </div>
 </section>

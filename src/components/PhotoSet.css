@@ -1,29 +1,41 @@
 .flex-container {
-    width: 60vw; /* Now the container takes 70% of the viewport width */
-    
+    width: 62vw; /* Container takes 62% of the viewport width */
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch; /* Ensure both elements stretch to the same height */
     gap: 20px; /* Space between the carousel and the right content */
-    margin: auto; /* Center the container horizontally */
+    margin: auto;/* Center the container horizontally */
 }
 
 .carousel-container {
+    display: flex;
+    align-items: center;
     flex: 1; /* Carousel will take flexible space */
 }
 
 #photo-album-carousel {
 
     padding: 2vw;
-    width: 67vw; /* Carousel will take 100% of the available container space */
+
     background-color: #ffffff;
 
 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Contain the overflow for the entire carousel */
+    color: rgb(18, 67, 67);
+
+    
 }
 
+#photo-album-carousel h2{
+    color: rgb(62, 52, 173);
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 3rem;
+    margin-top: 0;
+
+
+}
 .carousel .control-arrow {
     background-color: rgba(0, 0, 0, 1);
     border-radius: 50%;
@@ -55,8 +67,14 @@
     background-color: #f9f9f9; /* Light background */
     padding: 20px;
     border-radius: 10px;
+
+
 }
 
+.right-content p{
+
+    font-size: 2.4vw;
+}
 @media (max-width: 600px) {
     .flex-container {
 
@@ -73,6 +91,7 @@
     }
 
     .right-content {
+
         width: 60vw; /* Right content takes full width below carousel */
 
     }
