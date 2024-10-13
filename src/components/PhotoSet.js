@@ -7,6 +7,10 @@ const PhotoSet = ({ title }) => {
     
 
     <section id="photo-album-carousel">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+        
+
+
         
 
   <h2>My Cat</h2>

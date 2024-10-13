@@ -14,6 +14,7 @@ function App() {
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet" />      
 <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"/>
       
       <div className="sidebar">
           <div className="profile-container">
