@@ -19,7 +19,7 @@ const PhotoSet = ({ title }) => {
   <div className="flex-container">
     <div className="carousel-container">
       <Carousel
-        showArrows={true}
+        showArrows={false}
         autoPlay={true}
         infiniteLoop={true}
         showThumbs={false}

@@ -121,7 +121,7 @@ h2 {
   position: static;
   width: min(20vw, 20vh); 
   height: min(20vw, 20vh); 
-  border-radius: 50%; /* Creates a circular shape */
+  border-radius: 50%; 
   
 
   margin: 0 0;

@@ -8,6 +8,7 @@
 }
 
 .carousel-container {
+    
     display: flex;
     align-items: center;
     flex: 1; /* Carousel will take flexible space */
@@ -29,6 +30,7 @@
 }
 
 #photo-album-carousel h2{
+    
     color: rgb(62, 52, 173);
     font-family: 'Dancing Script', cursive;
 
@@ -52,13 +54,14 @@
     align-items: center;
 
     position: absolute;
-    transform: translateY(25vh);
+    transform: translateY(0%);
 }
 
 .carousel-image {
+
     
-    width: 80%;
-    height: 50vh; /* Adjust for a smaller, more vertical card */
+    width: 50vw;
+    height: 30vw;
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -67,7 +70,7 @@
 
 .right-content {
     width: 28vw; /* Right content now takes the remaining space */
-    background-color: #f9f9f9; /* Light background */
+
     padding: 20px;
     border-radius: 10px;
 
