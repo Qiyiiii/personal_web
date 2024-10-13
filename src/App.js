@@ -32,7 +32,7 @@ function App() {
           <p>Email: qiyi.zhang@rotman.utoronto.ca</p>
           <p>Discord: leo010701</p>
           <p>Instagram: leozhang0701</p>
-          <p>WeChat: zqy13966767271</p>
+
           
 
           <div className="links">
