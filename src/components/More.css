@@ -1,0 +1,40 @@
+.photo-album {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-album h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* More space for photos */
+    gap: 15px; /* Increased spacing between photos */
+  }
+  
+  .photo-placeholder {
+    width: 100%;
+    height: 120px;
+    background-color: #e0e0e0;
+    color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow to placeholders */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add some hover effects */
+  }
+  
+  .photo-placeholder:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+  }
+  

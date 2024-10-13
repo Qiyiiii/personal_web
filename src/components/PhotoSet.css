@@ -1,0 +1,90 @@
+.flex-container {
+    width: 60vw; /* Now the container takes 70% of the viewport width */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Space between the carousel and the right content */
+    margin: auto; /* Center the container horizontally */
+}
+
+.carousel-container {
+    flex: 1; /* Carousel will take flexible space */
+}
+
+#photo-album-carousel {
+
+    padding: 2vw;
+    width: 67vw; /* Carousel will take 100% of the available container space */
+    background-color: #ffffff;
+
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Contain the overflow for the entire carousel */
+}
+
+.carousel .control-arrow {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+    color: white;
+
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    transform: translateY(25vh);
+}
+
+.carousel-image {
+    
+    width: 80%;
+    height: 50vh; /* Adjust for a smaller, more vertical card */
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    object-position: center; /* Center the image vertically */
+}
+
+.right-content {
+    width: 28vw; /* Right content now takes the remaining space */
+    background-color: #f9f9f9; /* Light background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+
+        flex-direction: column; /* Stack the items vertically */
+        width: 70vw; /* Reduce width to fit mobile screens */
+       
+        
+        
+    }
+
+    .carousel-container {
+        width: 50vw; /* Carousel takes full width on small screens */
+        margin: auto;
+    }
+
+    .right-content {
+        width: 60vw; /* Right content takes full width below carousel */
+
+    }
+
+    #photo-album-carousel {
+        width: 100%; /* Ensure the carousel takes full width on small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .carousel-image {
+        
+        
+        height: 40vh; /* Adjust height for smaller screens */
+    }
+}

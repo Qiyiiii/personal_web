@@ -1,9 +1,16 @@
 
 
-/* Basic Layout */
-#bio, #work, #project, #more {
-  margin-top: 2.5rem;
+
+.greeting {
+  margin-top: 5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #039536;
+  text-shadow: 1px 1px 4px rgba(20, 34, 146, 0.1);
 }
+
+
+
 #bio::before,
 #work::before,
 #project::before,
@@ -77,6 +84,7 @@ h2 {
 }
 
 .links a:hover {
+  color: white;
   text-decoration: underline;
 }
 
@@ -136,18 +144,21 @@ h2 {
   color: #333333;
   overflow-y: auto;
   box-sizing: border-box; 
-  padding: 5rem 2rem 2rem 2rem;
-  padding: 1.4rem; /* Optional: Add padding for inner content */
+  padding: 2rem 1rem;
+
 }
 
 
 .content section {
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
 }
 
 .content h2 {
   font-size: 2rem; /* Responsive font size */
-  margin-bottom: 1.5rem;
+  color: #04a5a0;
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .content p {
@@ -175,7 +186,7 @@ h2 {
   justify-content: center;
   list-style: none;
   display: flex;
-  gap: 2rem; /* Use rem for consistent spacing */
+  gap: 5rem; /* Use rem for consistent spacing */
   margin: 0;
   padding: 0;
 }
@@ -188,6 +199,7 @@ h2 {
 
 .navbar nav ul li a:hover {
   text-decoration: underline;
+  color: antiquewhite;
 }
 
 /* Media query for smaller screens */

@@ -1,0 +1,11 @@
+/* src/components/Bio.css */
+
+.bio-link {
+    color: #0046d5; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .bio-link:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+    color: #02b3e4; /* Hover color */
+  }

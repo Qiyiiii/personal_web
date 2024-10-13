@@ -1,10 +1,17 @@
 import React from 'react';
 import './App.css';
+import Bio from './components/Bio';
+import WorkExp from './components/WorkExp';
+import ProjExp from './components/ProjExp';
+import More from './components/More';
 
 function App() {
   return (
+    
     <div className="App">
-      
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet" />      
       
       <div className="sidebar">
           <div className="profile-container">
@@ -44,56 +51,37 @@ function App() {
           </ul>
         </nav>
       </header>
+      <h1 className='greeting'>Hi, I’m Qiyi (Leo) Zhang</h1>
       <section className="detail">
+      
         <section id="bio">
           <h2 >Bio</h2>
-          <p >
-            {"Masters of Management Analytics Candidate in Rotman School of Management, University of Toronto, Toronto, Ontario, Canada"}
-          <br />
-          <br />
-            {"Data Scientist and Full-Stack Developer with expertise in data analytics, machine learning, and software development."}
-            <br /><br />
-            {"Experienced in deploying algorithms and building tools to automate data workflow. Recognized for innovative work in BERT-based models and dynamic web applications."}
-          </p>
+          <Bio />
+       
+          <div className="container">
+  
+        
+      </div>
         </section>
 
         <section id="work">
-          <h2>Work Experience</h2>
-          <p>
-            {"Masters of Management Analytics Candidate in Rotman School of Management, University of Toronto, Toronto, Ontario, Canada"}
-          <br />
-          <br />
-            {"Data Scientist and Full-Stack Developer with expertise in data analytics, machine learning, and software development."}
-            <br /><br />
-            {"Experienced in deploying algorithms and building tools to automate data workflow. Recognized for innovative work in BERT-based models and dynamic web applications."}
-          </p>
+        <h2 >Career</h2>
+        <WorkExp />
 
         </section>
 
         
         <section id="project">
           <h2>Project Experience</h2>
-          <p>
-            {"Masters of Management Analytics Candidate in Rotman School of Management, University of Toronto, Toronto, Ontario, Canada"}
-          <br />
-          <br />
-            {"Data Scientist and Full-Stack Developer with expertise in data analytics, machine learning, and software development."}
-            <br /><br />
-            {"Experienced in deploying algorithms and building tools to automate data workflow. Recognized for innovative work in BERT-based models and dynamic web applications."}
-          </p>
+          <ProjExp />
+      
 
         </section>
 
         <section id="more">
           <h2>More About Me</h2>
-          <p>
-            {"Masters of Management Analytics Candidate in Rotman School of Management, University of Toronto, Toronto, Ontario, Canada"}
-          <br />
-          <br />
-            {"Data Scientist and Full-Stack Developer with expertise in data analytics, machine learning, and software development."}
-            <br /><br />
-            {"Experienced in deploying algorithms and building tools to automate data workflow. Recognized for innovative work in BERT-based models and dynamic web applications."}
-          </p>
+          <More />
+
 
         </section>
         </section>
